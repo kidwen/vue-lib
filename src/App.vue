@@ -4,14 +4,13 @@
         <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
         <ul>
             <li>
-                <router-link>home</router-link>
+                <router-link to="/home">home</router-link>
             </li>
             <li>
-                <router-link>style</router-link>
+                <router-link to="/preview">2</router-link>
             </li>
-            <li></li>
         </ul>
-        <router-link></router-link>
+        <router-view></router-view>
     </section>
 </template>
 

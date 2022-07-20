@@ -4,9 +4,10 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter)
 
 import HelloWord from '../components/HelloWorld.vue';
-import Style from '../components/class-style.component.vue';
+import Preview from '../components/preview.vue'
 
 const router = new VueRouter({
+    mode: 'history',
     routes: [
         {
             path: '/',
@@ -17,8 +18,8 @@ const router = new VueRouter({
             component: HelloWord
         },
         {
-            path: 'style',
-            component: Style
+            path: '/preview',
+            component: Preview
         }
     ]
 })
