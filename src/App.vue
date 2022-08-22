@@ -1,27 +1,50 @@
 <template>
     <section id="app">
-        <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-        <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-        <ul>
-            <li>
-                <router-link to="/home">home</router-link>
-            </li>
-            <li>
-                <router-link to="/preview">2</router-link>
-            </li>
-        </ul>
-        <router-view></router-view>
+        <el-row>
+            <el-col :span="2" style="min-width: 200px;">
+                <el-menu router :default-active="$route.path" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+                    <el-menu-item index="/home" route="home">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title">
+                            home
+                        </span>
+                    </el-menu-item>
+                    <el-menu-item index="/dragableTree" route="dragableTree">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title">
+                            dragableTree
+                        </span>
+                    </el-menu-item>
+                    <el-menu-item index="/preview" route="preview">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title">
+                            preview
+                        </span>
+                    </el-menu-item>
+                </el-menu>
+            </el-col>
+            <el-col :span="12" style="padding: 20px;">
+                <router-view></router-view>
+            </el-col>
+        </el-row>
     </section>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
     name: "App",
-    // components: {
-    //     HelloWorld
-    // }
+    created() {
+        console.log(this.$route);
+    },
+    methods: {
+        handleOpen(key, keyPath) {
+            console.log(key, keyPath);
+        },
+        handleClose(key, keyPath) {
+            console.log(key, keyPath);
+        }
+    }
 };
 </script>
 
@@ -30,8 +53,6 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
 }
 </style>

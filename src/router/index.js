@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter)
 
 import HelloWord from '../components/HelloWorld.vue';
+import DragableTree from '../components/dragableTree/DragableTree.vue';
 import Preview from '../components/preview.vue'
 
 const router = new VueRouter({
@@ -16,6 +17,10 @@ const router = new VueRouter({
         {
             path: '/home',
             component: HelloWord
+        },
+        {
+            path: '/dragableTree',
+            component: DragableTree
         },
         {
             path: '/preview',
