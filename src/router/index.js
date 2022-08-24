@@ -1,32 +1,37 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 import HelloWord from '../components/HelloWorld.vue';
 import DragableTree from '../components/dragableTree/DragableTree.vue';
-import Preview from '../components/preview.vue'
+import Preview from '../components/preview.vue';
+import NavMenu from '../components/NavMenu.vue';
 
 const router = new VueRouter({
     mode: 'history',
     routes: [
         {
             path: '/',
-            redirect: 'home'
+            redirect: 'home',
         },
         {
             path: '/home',
-            component: HelloWord
+            component: HelloWord,
         },
         {
             path: '/dragableTree',
-            component: DragableTree
+            component: DragableTree,
         },
         {
             path: '/preview',
-            component: Preview
+            component: Preview,
+        },
+        {
+            path: '/menu',
+            component: NavMenu,
         }
     ]
-})
+});
 
 export default router
