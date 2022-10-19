@@ -7,6 +7,7 @@ import HelloWord from '../components/HelloWorld.vue';
 import DragableTree from '../components/dragableTree/DragableTree.vue';
 import Preview from '../components/preview.vue';
 import NavMenu from '../components/NavMenu.vue';
+import PopoverNavMenu from '../components/PopoverNavMenu.vue';
 
 const router = new VueRouter({
     mode: 'history',
@@ -30,6 +31,10 @@ const router = new VueRouter({
         {
             path: '/menu',
             component: NavMenu,
+        },
+        {
+            path: '/popover-menu',
+            component: PopoverNavMenu,
         }
     ]
 });

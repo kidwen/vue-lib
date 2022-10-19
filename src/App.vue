@@ -27,6 +27,12 @@
                             menu
                         </span>
                     </el-menu-item>
+                    <el-menu-item index="/popover-menu" route="menu">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title">
+                            popover-menu
+                        </span>
+                    </el-menu-item>
                 </el-menu>
             </el-col>
             <el-col :span="12" style="padding: 20px;">
