@@ -3,11 +3,12 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-import HelloWord from '../components/HelloWorld.vue';
+import HelloWorld from '../components/HelloWorld.vue';
 import DragableTree from '../components/dragableTree/DragableTree.vue';
-import Preview from '../components/preview.vue';
+import Preview from '../components/Preview.vue';
 import NavMenu from '../components/NavMenu.vue';
 import PopoverNavMenu from '../components/PopoverNavMenu.vue';
+import Store from '../components/StoreDemo.vue';
 
 const router = new VueRouter({
     mode: 'history',
@@ -18,7 +19,7 @@ const router = new VueRouter({
         },
         {
             path: '/home',
-            component: HelloWord,
+            component: HelloWorld,
         },
         {
             path: '/dragableTree',
@@ -35,6 +36,10 @@ const router = new VueRouter({
         {
             path: '/popover-menu',
             component: PopoverNavMenu,
+        },
+        {
+            path: '/store',
+            component: Store,
         }
     ]
 });

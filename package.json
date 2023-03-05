@@ -1,5 +1,5 @@
 {
-    "name": "vue-demo-2",
+    "name": "vue-lib",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -14,7 +14,8 @@
         "rxjs": "^7.2.0",
         "vue": "^2.6.11",
         "vue-class-component": "^7.2.6",
-        "vue-router": "3.0.1"
+        "vue-router": "3.0.1",
+        "vuex": "^3.6.2"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "~4.5.0",
