@@ -20,7 +20,7 @@ export default class ClassStyleComponent extends Vue {
     message = "hello Word!";
     fetchPost(postId: string): Promise<void> {
         console.log(postId);
-        return new Promise((resolve) => {
+        return new Promise((resolve: () => void) => {
             resolve();
         });
         // ...
